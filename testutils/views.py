@@ -59,7 +59,7 @@ def analyze(request):
             if index > limit: break
             if djtext[index] != djtext[index + 1]:
                 analyzed = analyzed + char
-
+        analyzed = analyzed+djtext[index]
         params = {'purpose': 'Removed duplicates', 'analyzed_text': analyzed}
         djtext = analyzed
     if counter_checkbox == "on":
